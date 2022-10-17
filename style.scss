@@ -1,0 +1,307 @@
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+}
+.title {
+  width: 200px;
+  padding: 5px;
+  font-size: 32px;
+  margin-left: 5%;
+}
+#hamburger-menu {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  position: absolute;
+  right: 6%;
+}
+#hamburger-menu span {
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  right: 20%;
+}
+#hamburger-menu span:nth-child(1) {
+  top: 24px;
+  transition: transform 0.4s ease-in-out;
+}
+#hamburger-menu span:nth-child(2) {
+  top: 32px;
+  transition: display 0.4s ease-in-out;
+}
+#hamburger-menu span:nth-child(3) {
+  top: 40px;
+  transition: transform 0.4s ease-in-out;
+}
+#hamburger-menu span.active {
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  right: 6%;
+}
+.active#hamburger-menu span:nth-child(1) {
+  top: 24px;
+  transform: translateY(8px) rotate(405deg);
+}
+.active#hamburger-menu span:nth-child(2) {
+  top: 32px;
+  display: none;
+}
+.active#hamburger-menu span:nth-child(3) {
+  top: 40px;
+  transform: translateY(-8px) rotate(-405deg);
+}
+#cover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #3f3f3f;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#cover.disable {
+  opacity: 0;
+  pointer-events: none;
+}
+#cover-menu {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  margin-right: auto;
+  padding-top: 60px;
+  background-color: black;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.appear#cover-menu {
+  transform: translateX(0%);
+}
+.control-menu {
+  margin-top: 60px;
+}
+.control-menu nav ul {
+  border-top: 1px solid white;
+  margin: 10px;
+  li {
+    padding: 8px;
+    border-bottom: 1px solid white;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.SNS {
+  margin-top: 50px;
+}
+.SNS nav ul {
+  margin: 10px;
+  li {
+    padding: 4px;
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+  }
+}
+// #video {
+//   padding-top: 60px;
+// }
+#bg-video {
+  width: 100%;
+  pointer-events: none;
+}
+
+.sec-title {
+  font-size: 32px;
+  text-align: center;
+  margin: 20px 0 20px;
+}
+
+#pickup .slick-area {
+  font-size: 0;
+}
+#pickup .slick-area li {
+  padding: 0 30px;
+}
+
+#feature h1 {
+  font-size: 32px;
+  text-align: center;
+  margin: 20px 0 20px;
+}
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+.item {
+  box-shadow: 1px 1px 6px 4px gray;
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+
+.discription {
+  padding: 20px;
+}
+.dis-category {
+  width: 50px;
+  font-size: 8px;
+}
+.text {
+  font-size: 14px;
+  margin: 10px 0 10px;
+}
+.dis-date {
+  font-size: 8px;
+  width: 50px;
+  margin-left: auto;
+}
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+footer {
+  padding-top: 30px;
+  margin-top: 30px;
+  color: white;
+  background-color: black;
+}
+#contact {
+  height: 500px;
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    margin: 20px 0 20px;
+  }
+}
+.container {
+  display: flex;
+  padding-bottom: 70px;
+}
+.coctact-text {
+  width: 50%;
+  height: 80%;
+  padding: 20px;
+  padding-right: 40px;
+  p {
+    margin-bottom: 20px;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 20px;
+}
+#name {
+  width: 90%;
+  background-color: white;
+  margin: 0 0 20px;
+  height: 40px;
+}
+#mail {
+  width: 90%;
+  background-color: white;
+  margin: 0 0 20px;
+  height: 40px;
+}
+#massage {
+  width: 90%;
+  background-color: white;
+  height: 80px;
+}
+button {
+  width: 150px;
+  background-color: black;
+  border-color: white;
+  border-width: 2px;
+  color: white;
+  height: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.end {
+  width: 100%;
+  text-align: center;
+}
+@media screen and(max-width:900px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+  #contact {
+    height: 820px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
+  }
+  .coctact-text {
+    width: 100%;
+    height: 45%;
+    padding: 20px;
+  }
+  .form {
+    display: flex;
+    height: 45%;
+    flex-direction: column;
+    width: 100%;
+  }
+  #name {
+    width: 90%;
+    background-color: white;
+    margin: 0 0 20px;
+    height: 40px;
+  }
+  #mail {
+    width: 90%;
+    background-color: white;
+    margin: 0 0 20px;
+    height: 40px;
+  }
+  #massage {
+    width: 90%;
+    background-color: white;
+    height: 80px;
+  }
+
+  .end {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and(max-width:600px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+  }
+}
